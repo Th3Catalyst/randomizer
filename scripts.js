@@ -9,7 +9,7 @@ function displayRandomNumbers() {
         let randomNumber;
         do {
             randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 10
-        } while (generatedNumbers.has(randomNumber));
+        } while (count < 120);
         
         generatedNumbers.add(randomNumber);
         console.log(titles[randomNumber].name + count);
@@ -17,15 +17,15 @@ function displayRandomNumbers() {
         count++;
        
         clearInterval(interval);
-        if (count >= 2.5) {
+        if (count >= 25) {
             intervalTime += 5;
-            if (count >= 3.5) {
+            if (count >= 35) {
                 intervalTime += 9;
-                if (count >= 4.0) {
+                if (count >= 40) {
                     intervalTime += 15;
-                    if (count >= 4.2) {
+                    if (count >= 42) {
                         intervalTime += 20;
-                        if (count >= 4.5) {
+                        if (count >= 45) {
                             clearInterval(interval);
                             return;
                         }
