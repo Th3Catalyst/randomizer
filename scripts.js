@@ -3,15 +3,17 @@ function displayRandomNumbers() {
     let intervalTime = 100;
     let interval = setInterval(generateNumber, intervalTime);
     const generatedNumbers = new Set();
+    let titles = [{name:'common', rarity:1}, {name:'uncommon', rarity:2}, {name:'rare', rarity:3}, {name:'mythic', rarity:4}];
 
     function generateNumber() {
         let randomNumber;
         do {
-            randomNumber = Math.floor(Math.random() * 101); // Generate a random number between 0 and 100
+            randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 10
         } while (generatedNumbers.has(randomNumber));
         
         generatedNumbers.add(randomNumber);
-        console.log(randomNumber);
+        console.log(titles[randomNumber].name);
+        document.getElementById('titleDisplay').innerHTML = titles[randomNumber].name;
         count++;
        
         clearInterval(interval);
