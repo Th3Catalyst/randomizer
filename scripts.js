@@ -12,20 +12,20 @@ function displayRandomNumbers() {
         } while (generatedNumbers.has(randomNumber));
         
         generatedNumbers.add(randomNumber);
-        console.log(titles[randomNumber].name);
+        console.log(titles[randomNumber].name + count);
         document.getElementById('titleDisplay').innerHTML = titles[randomNumber].name;
         count++;
        
         clearInterval(interval);
-        if (count >= 25) {
+        if (count >= 2.5) {
             intervalTime += 5;
-            if (count >= 35) {
+            if (count >= 3.5) {
                 intervalTime += 9;
-                if (count >= 40) {
+                if (count >= 4.0) {
                     intervalTime += 15;
-                    if (count >= 42) {
+                    if (count >= 4.2) {
                         intervalTime += 20;
-                        if (count >= 45) {
+                        if (count >= 4.5) {
                             clearInterval(interval);
                             return;
                         }
