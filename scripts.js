@@ -8,12 +8,12 @@ function displayRandomNumbers() {
     function generateNumber() {
         let randomNumber;
         do {
-            randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 10
+            randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 10
         } while (generatedNumbers.has(randomNumber));
-        
+        randomTitle = titles[randomNumber % 10].name;
         generatedNumbers.add(randomNumber);
-        console.log(titles[randomNumber].name + count);
-        document.getElementById('titleDisplay').innerHTML = titles[randomNumber].name;
+        console.log(randomTitle + count);
+        document.getElementById('titleDisplay').innerHTML = randomTitle;
         count++;
        
         clearInterval(interval);
