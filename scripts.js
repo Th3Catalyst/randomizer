@@ -3,7 +3,7 @@ function displayRandomNumbers() {
     let intervalTime = 100;
     let interval = setInterval(generateNumber, intervalTime);
     const generatedNumbers = new Set();
-    let titles = [{name:'common', rarity:1}, {name:'uncommon', rarity:2}, {name:'rare', rarity:3}, {name:'mythic', rarity:4}];
+    let titles = [{name:'common', rarity:1}, {name:'uncommon', rarity:2}, {name:'rare', rarity:3}, {name:'mythic', rarity:4}, {name:'5r', rarity:4}, {name:'6r', rarity:4}, {name:'7r', rarity:4}, {name:'8r', rarity:4}, {name:'9r', rarity:4}, {name:'10r', rarity:4}];
 
     function generateNumber() {
         let randomNumber;
