@@ -9,7 +9,7 @@ function displayRandomNumbers() {
         let randomNumber;
         do {
             randomNumber = Math.floor(Math.random() * 10); // Generate a random number between 0 and 10
-        } while (count < 120);
+        } while (generatedNumbers.has(randomNumber));
         
         generatedNumbers.add(randomNumber);
         console.log(titles[randomNumber].name + count);
